@@ -1,0 +1,24 @@
+seed: 42
+output_dir: results
+
+data:
+  # demo         -> synthetic data, runs instantly, no dataset needed
+  # features_csv -> real features built by `python -m smartcane.build_features`
+  source: demo
+  features_csv: data/features.csv
+  kfall:
+    sensors: data
+    labels: data
+    cache: data/cache
+
+# Must match what build_features used, because false alarms/hour depends on stride.
+window:
+  length_sec: 1.0
+  stride_sec: 0.25
+
+rq4:
+  normal_only_method: iforest      # iforest | ocsvm
+  fp_quantile: 0.99
+  supervised_trees: 100
+  pos_fractions: [1.0, 0.5, 0.25, 0.1, 0.05]
+  neg_fractions: [1.0, 0.5, 0.25, 0.1]

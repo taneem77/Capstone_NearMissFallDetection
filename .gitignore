@@ -1,0 +1,29 @@
+# Datasets
+label data/
+sensor data/
+*.pkl
+data/*
+!data/.gitkeep
+sample_data/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment variables
+.env
+
+# Logs, demo data and analysis outputs
+logs/
+*.log
+event_log.csv
+results/
