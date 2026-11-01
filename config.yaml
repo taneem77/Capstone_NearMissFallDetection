@@ -1,0 +1,16 @@
+seed: 42
+output_dir: results
+
+data:
+  source: demo
+  features_csv: data/features.csv
+
+window:
+  length_sec: 2.0
+  stride_sec: 1.0
+
+rq4:
+  normal_only_method: iforest
+  fp_quantile: 0.99
+  pos_fractions: [1.0, 0.5, 0.25, 0.1, 0.05]
+  neg_fractions: [1.0, 0.5, 0.25, 0.1]
