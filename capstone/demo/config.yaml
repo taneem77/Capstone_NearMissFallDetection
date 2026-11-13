@@ -1,0 +1,40 @@
+# Smart Cane Capstone Configuration (Single Source of Truth)
+# Project ID: PW_27_MHR_01
+# PES University • Guide: Dr. Mamatha H R
+# Team: Tanisha Mathur, Samika Ojha, Saatvik Gupta, Pratham S Reddy
+
+seed: 42
+
+dataset:
+  name: "K-Fall Multi-Subject Dataset & Cane Telemetry Benchmark"
+  sensor_dir: "sensor data"
+  label_dir: "label data"
+  sample_rate_hz: 100.0
+  default_subject: "SA06"
+  cane_sample_dir: "capstone/data/sample"
+
+units:
+  accel_unit_multiplier: 9.80665      # Multiply K-Fall g units to obtain m/s^2
+  gyro_unit: "deg/s"                  # Gyroscope rotation speed in degrees per second
+  grip_adc_resolution: 4095           # ESP32 12-bit ADC full-scale (0-3.3V)
+  grip_adc_to_newton: 0.010989        # 45.0 N / 4095 ADC counts
+
+window:
+  length_sec: 1.0                     # 1.0-second sliding analysis window (100 samples)
+  stride_sec: 0.25                    # 0.25-second stride (75% overlap, 25 samples advance)
+
+thresholds:
+  jerk_threshold: 55.0                # Kinematic jerk threshold in m/s^3 (da/dt)
+  grip_rise_threshold: 12.0           # Dynamic grip force rise threshold in Newtons (above baseline)
+  coincidence_window_sec: 0.35        # Temporal synchronization tolerance window (350 ms)
+  calibration_k_sigma: 3.0            # Personal baseline factor: threshold = mu + 3.0 * sigma
+
+server:
+  preferred_port: 5000
+  port_range_scan: 20
+  auto_open_browser: true
+
+cache_files:
+  catalog: "capstone/demo/dataset_catalog.json"
+  evaluation: "capstone/demo/dataset_evaluation_cache.json"
+  results: "capstone/demo/results_cache.json"

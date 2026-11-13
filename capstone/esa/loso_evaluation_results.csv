@@ -1,0 +1,6 @@
+test_subject,calibrated_jerk_th,calibrated_grip_th,imu_sensitivity,imu_precision,imu_fa_per_hr,grip_sensitivity,grip_precision,grip_fa_per_hr,fused_sensitivity,fused_precision,fused_fa_per_hr
+S01,49.74,300.0,0.2109,0.6136,1912.5,0.5781,1.0,0.0,0.5078,1.0,0.0
+S02,50.3,300.0,0.2031,0.7647,900.0,0.5781,1.0,0.0,0.5,1.0,0.0
+S03,48.72,300.0,0.2109,0.4909,3150.0,0.5938,1.0,0.0,0.5078,1.0,0.0
+S04,50.23,300.0,0.2266,0.725,1237.5,0.5938,1.0,0.0,0.7266,0.8857,1350.0
+S05,49.95,300.0,0.2031,0.6842,1350.0,0.6172,1.0,0.0,0.5,1.0,0.0

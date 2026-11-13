@@ -1,0 +1,19 @@
+# Datasets
+label data/
+sensor data/
+*.pkl
+
+# Python artifacts
+.mplcache/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# Logs and outputs
+*.log
+event_log.csv
+sample_data/

@@ -1,0 +1,123 @@
+{
+  "rq1": {
+    "title": "RQ1: Peak-Jerk Threshold vs. Random Forest (K-Fall SACRUM IMU)",
+    "description": "Evaluated on K-Fall public dataset (100 Hz, lower back) using Leave-One-Subject-Out cross-validation across representative folds.",
+    "dataset": "K-Fall Public Dataset (15,092 windows, 1,418 near-miss events)",
+    "data_type": "REAL",
+    "metrics": [
+      {
+        "model": "Peak-Jerk Threshold",
+        "sensitivity": 0.737,
+        "precision": 0.348,
+        "false_alarms_per_hour": 496.007,
+        "f1": 0.473,
+        "type": "Heuristic Rule (|J| >= 55 m/s³)"
+      },
+      {
+        "model": "Random Forest (50 IMU Features)",
+        "sensitivity": 0.848,
+        "precision": 0.908,
+        "false_alarms_per_hour": 82.141,
+        "f1": 0.877,
+        "type": "Supervised ML (100 Trees, Balanced)"
+      }
+    ],
+    "top_features": [
+      {"feature": "jerk_max", "importance": 0.184, "desc": "Maximum kinematic jerk magnitude"},
+      {"feature": "acc_z_std", "importance": 0.126, "desc": "Vertical acceleration variance"},
+      {"feature": "gyro_mag_max", "importance": 0.098, "desc": "Peak rotational velocity"},
+      {"feature": "acc_mag_p2p", "importance": 0.089, "desc": "Acceleration peak-to-peak amplitude"},
+      {"feature": "jerk_rms", "importance": 0.076, "desc": "RMS mechanical vibration energy"},
+      {"feature": "gyro_y_energy", "importance": 0.065, "desc": "Pitch rotational kinetic energy"},
+      {"feature": "acc_x_skew", "importance": 0.054, "desc": "Anterior-posterior asymmetry"},
+      {"feature": "acc_fft_dom_freq", "importance": 0.048, "desc": "Dominant spectral gait frequency"}
+    ]
+  },
+  "rq2": {
+    "title": "RQ2: Single-Sensor IMU (50 Features) vs. Dual-Domain Fused IMU+Grip (59 Features)",
+    "description": "Evaluated on smart cane telemetry benchmark using Leave-One-Subject-Out cross-validation across 8 subjects (960 windows, 85 events).",
+    "dataset": "Smart Cane Benchmark Protocol (960 windows, 8 subjects)",
+    "data_type": "SYNTHETIC_CANE",
+    "metrics": [
+      {
+        "model": "IMU Only (50 Features)",
+        "sensitivity": 0.176,
+        "specificity": 0.968,
+        "precision": 0.349,
+        "f1": 0.234,
+        "false_positives": 28,
+        "false_negatives": 70
+      },
+      {
+        "model": "IMU + Grip Fused (59 Features)",
+        "sensitivity": 1.000,
+        "specificity": 1.000,
+        "precision": 1.000,
+        "f1": 1.000,
+        "false_positives": 0,
+        "false_negatives": 0
+      }
+    ],
+    "top_fused_features": [
+      {"feature": "grip_delta_rise", "importance": 0.242, "desc": "Dynamic reflexive grip rise above sliding baseline"},
+      {"feature": "jerk_max", "importance": 0.185, "desc": "Peak mechanical jerk derivative"},
+      {"feature": "grip_rate_of_force", "importance": 0.141, "desc": "Rate of grasp force development (dF/dt)"},
+      {"feature": "grip_max", "importance": 0.112, "desc": "Peak palmar compression force"},
+      {"feature": "temporal_coupling_gap", "importance": 0.096, "desc": "Latency between jerk peak and grip reflex onset"}
+    ]
+  },
+  "rq3": {
+    "title": "RQ3: Physiological Coincidence Timing & Weekly Near-Fall Trend",
+    "description": "Temporal coupling dynamics between inertial jerk and involuntary palmar grasp reflex latency (Maki & McIlroy somatic reflex arc).",
+    "data_type": "SYNTHETIC_BENCHMARK",
+    "mean_latency_ms": 118.4,
+    "std_latency_ms": 14.2,
+    "coincidence_window_ms": 350,
+    "weekly_trend": [
+      {"week": "Week 1", "near_misses": 1, "hard_jolts_suppressed": 34, "status": "Normal Mobility"},
+      {"week": "Week 2", "near_misses": 2, "hard_jolts_suppressed": 29, "status": "Stable Baseline"},
+      {"week": "Week 3", "near_misses": 3, "hard_jolts_suppressed": 42, "status": "Minor Instability"},
+      {"week": "Week 4", "near_misses": 5, "hard_jolts_suppressed": 38, "status": "Elevated Risk Flagged"},
+      {"week": "Week 5", "near_misses": 8, "hard_jolts_suppressed": 45, "status": "Clinical Review Triggered"}
+    ]
+  },
+  "rq4": {
+    "title": "RQ4: Supervised Random Forest vs. Normal-Only (Isolation Forest) Anomaly Detection",
+    "description": "Evaluates training with zero stumble labels (normal gait only) versus supervised training under varied labeled fractions.",
+    "dataset": "K-Fall Benchmarking Subset (7,200 windows, 12 subjects, 173 events)",
+    "data_type": "REAL_BENCHMARK",
+    "headline": [
+      {
+        "model": "Supervised Random Forest",
+        "sensitivity": 0.879,
+        "specificity": 0.9997,
+        "precision": 0.987,
+        "f1": 0.930,
+        "false_alarms_per_hour": 4.10,
+        "training_data_required": "Labeled Near-Misses + Normal Gait"
+      },
+      {
+        "model": "Normal-Only (Isolation Forest)",
+        "sensitivity": 0.965,
+        "specificity": 0.9859,
+        "precision": 0.628,
+        "f1": 0.761,
+        "false_alarms_per_hour": 194.68,
+        "training_data_required": "Normal Gait Only (Zero Stumbles Needed)"
+      }
+    ],
+    "supervised_sweep": [
+      {"labeled_fraction": 1.00, "sensitivity": 0.879, "false_alarms_per_hour": 4.10, "f1": 0.930},
+      {"labeled_fraction": 0.50, "sensitivity": 0.780, "false_alarms_per_hour": 4.10, "f1": 0.871},
+      {"labeled_fraction": 0.25, "sensitivity": 0.694, "false_alarms_per_hour": 0.00, "f1": 0.819},
+      {"labeled_fraction": 0.10, "sensitivity": 0.486, "false_alarms_per_hour": 0.00, "f1": 0.654},
+      {"labeled_fraction": 0.05, "sensitivity": 0.335, "false_alarms_per_hour": 0.00, "f1": 0.502}
+    ],
+    "normal_only_sweep": [
+      {"normal_data_fraction": 1.00, "sensitivity": 0.965, "false_alarms_per_hour": 194.68, "f1": 0.761},
+      {"normal_data_fraction": 0.50, "sensitivity": 0.965, "false_alarms_per_hour": 192.63, "f1": 0.763},
+      {"normal_data_fraction": 0.25, "sensitivity": 0.965, "false_alarms_per_hour": 194.68, "f1": 0.759},
+      {"normal_data_fraction": 0.10, "sensitivity": 0.971, "false_alarms_per_hour": 188.53, "f1": 0.769}
+    ]
+  }
+}
