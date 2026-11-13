@@ -4,6 +4,7 @@ sensor data/
 *.pkl
 
 # Python artifacts
+.mplcache/
 __pycache__/
 *.py[cod]
 *$py.class

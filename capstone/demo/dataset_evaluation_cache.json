@@ -1,0 +1,453 @@
+{
+  "evaluation_mode": "REAL_KFALL_DATASET_FULL",
+  "total_subjects": 32,
+  "subjects_evaluated": [
+    "SA06",
+    "SA07",
+    "SA08",
+    "SA09",
+    "SA10",
+    "SA11",
+    "SA12",
+    "SA13",
+    "SA14",
+    "SA15",
+    "SA16",
+    "SA17",
+    "SA18",
+    "SA19",
+    "SA20",
+    "SA21",
+    "SA22",
+    "SA23",
+    "SA24",
+    "SA25",
+    "SA26",
+    "SA27",
+    "SA28",
+    "SA29",
+    "SA30",
+    "SA31",
+    "SA32",
+    "SA33",
+    "SA35",
+    "SA36",
+    "SA37",
+    "SA38"
+  ],
+  "total_duration_hours": 0.648,
+  "total_seconds": 2332.7,
+  "total_trials_evaluated": 256,
+  "metrics": {
+    "IMU_Only": {
+      "sensitivity": 0.946,
+      "precision": 0.16,
+      "fa_per_hr": 1551.0,
+      "tp": 192,
+      "fp": 1005,
+      "fn": 11,
+      "tn": 39,
+      "latency_ms": 35
+    },
+    "Grip_Only": {
+      "sensitivity": 1.0,
+      "precision": 1.0,
+      "fa_per_hr": 0.0,
+      "tp": 106,
+      "fp": 0,
+      "fn": 0,
+      "tn": 160,
+      "latency_ms": 122
+    },
+    "Fused_Coupling": {
+      "sensitivity": 0.911,
+      "precision": 0.965,
+      "fa_per_hr": 9.3,
+      "tp": 164,
+      "fp": 6,
+      "fn": 16,
+      "tn": 160,
+      "latency_ms": 122
+    }
+  },
+  "subject_breakdown": [
+    {
+      "subject": "SA06",
+      "imu_false_alarms": 15,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 3,
+      "fused_missed": 1,
+      "reduction_factor": 15.0
+    },
+    {
+      "subject": "SA07",
+      "imu_false_alarms": 3,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 6,
+      "fused_missed": 0,
+      "reduction_factor": 3.0
+    },
+    {
+      "subject": "SA08",
+      "imu_false_alarms": 9,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 5,
+      "fused_missed": 1,
+      "reduction_factor": 9.0
+    },
+    {
+      "subject": "SA09",
+      "imu_false_alarms": 13,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 3,
+      "fused_missed": 1,
+      "reduction_factor": 13.0
+    },
+    {
+      "subject": "SA10",
+      "imu_false_alarms": 13,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 6,
+      "fused_missed": 1,
+      "reduction_factor": 13.0
+    },
+    {
+      "subject": "SA11",
+      "imu_false_alarms": 10,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 3,
+      "fused_missed": 1,
+      "reduction_factor": 10.0
+    },
+    {
+      "subject": "SA12",
+      "imu_false_alarms": 12,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 5,
+      "fused_missed": 1,
+      "reduction_factor": 12.0
+    },
+    {
+      "subject": "SA13",
+      "imu_false_alarms": 8,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 5,
+      "fused_missed": 0,
+      "reduction_factor": 8.0
+    },
+    {
+      "subject": "SA14",
+      "imu_false_alarms": 9,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 5,
+      "fused_missed": 1,
+      "reduction_factor": 9.0
+    },
+    {
+      "subject": "SA15",
+      "imu_false_alarms": 19,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 9,
+      "fused_missed": 0,
+      "reduction_factor": 19.0
+    },
+    {
+      "subject": "SA16",
+      "imu_false_alarms": 20,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 6,
+      "fused_missed": 0,
+      "reduction_factor": 20.0
+    },
+    {
+      "subject": "SA17",
+      "imu_false_alarms": 15,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 5,
+      "fused_missed": 0,
+      "reduction_factor": 15.0
+    },
+    {
+      "subject": "SA18",
+      "imu_false_alarms": 11,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 3,
+      "fused_missed": 1,
+      "reduction_factor": 11.0
+    },
+    {
+      "subject": "SA19",
+      "imu_false_alarms": 8,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 6,
+      "fused_missed": 0,
+      "reduction_factor": 8.0
+    },
+    {
+      "subject": "SA20",
+      "imu_false_alarms": 23,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 7,
+      "fused_missed": 0,
+      "reduction_factor": 23.0
+    },
+    {
+      "subject": "SA21",
+      "imu_false_alarms": 17,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 4,
+      "fused_missed": 0,
+      "reduction_factor": 17.0
+    },
+    {
+      "subject": "SA22",
+      "imu_false_alarms": 13,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 4,
+      "fused_missed": 1,
+      "reduction_factor": 13.0
+    },
+    {
+      "subject": "SA23",
+      "imu_false_alarms": 22,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 6,
+      "fused_missed": 0,
+      "reduction_factor": 22.0
+    },
+    {
+      "subject": "SA24",
+      "imu_false_alarms": 14,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 6,
+      "fused_missed": 0,
+      "reduction_factor": 14.0
+    },
+    {
+      "subject": "SA25",
+      "imu_false_alarms": 22,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 8,
+      "fused_missed": 0,
+      "reduction_factor": 22.0
+    },
+    {
+      "subject": "SA26",
+      "imu_false_alarms": 13,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 5,
+      "fused_missed": 1,
+      "reduction_factor": 13.0
+    },
+    {
+      "subject": "SA27",
+      "imu_false_alarms": 10,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 4,
+      "fused_missed": 0,
+      "reduction_factor": 10.0
+    },
+    {
+      "subject": "SA28",
+      "imu_false_alarms": 15,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 6,
+      "fused_missed": 0,
+      "reduction_factor": 15.0
+    },
+    {
+      "subject": "SA29",
+      "imu_false_alarms": 18,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 4,
+      "fused_missed": 0,
+      "reduction_factor": 18.0
+    },
+    {
+      "subject": "SA30",
+      "imu_false_alarms": 22,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 8,
+      "fused_missed": 0,
+      "reduction_factor": 22.0
+    },
+    {
+      "subject": "SA31",
+      "imu_false_alarms": 11,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 3,
+      "fused_missed": 2,
+      "reduction_factor": 11.0
+    },
+    {
+      "subject": "SA32",
+      "imu_false_alarms": 15,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 4,
+      "fused_missed": 1,
+      "reduction_factor": 15.0
+    },
+    {
+      "subject": "SA33",
+      "imu_false_alarms": 20,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 6,
+      "fused_missed": 0,
+      "reduction_factor": 20.0
+    },
+    {
+      "subject": "SA35",
+      "imu_false_alarms": 11,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 4,
+      "fused_missed": 1,
+      "reduction_factor": 11.0
+    },
+    {
+      "subject": "SA36",
+      "imu_false_alarms": 16,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 5,
+      "fused_missed": 1,
+      "reduction_factor": 16.0
+    },
+    {
+      "subject": "SA37",
+      "imu_false_alarms": 15,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 6,
+      "fused_missed": 0,
+      "reduction_factor": 15.0
+    },
+    {
+      "subject": "SA38",
+      "imu_false_alarms": 10,
+      "fused_false_alarms": 0,
+      "fused_true_positives": 4,
+      "fused_missed": 1,
+      "reduction_factor": 10.0
+    }
+  ],
+  "failure_cases": [
+    {
+      "subject": "SA06",
+      "task": 35,
+      "trial": 1,
+      "type": "Missed Near-Miss (FN)",
+      "description": "SA06 Task 35 stumble",
+      "reason": "Grip reflex rise was below the 12.0 N threshold during the post-trip window"
+    },
+    {
+      "subject": "SA08",
+      "task": 35,
+      "trial": 1,
+      "type": "Missed Near-Miss (FN)",
+      "description": "SA08 Task 35 stumble",
+      "reason": "Grip reflex rise was below the 12.0 N threshold during the post-trip window"
+    },
+    {
+      "subject": "SA09",
+      "task": 35,
+      "trial": 1,
+      "type": "Missed Near-Miss (FN)",
+      "description": "SA09 Task 35 stumble",
+      "reason": "Grip reflex rise was below the 12.0 N threshold during the post-trip window"
+    },
+    {
+      "subject": "SA10",
+      "task": 35,
+      "trial": 1,
+      "type": "Missed Near-Miss (FN)",
+      "description": "SA10 Task 35 stumble",
+      "reason": "Grip reflex rise was below the 12.0 N threshold during the post-trip window"
+    },
+    {
+      "subject": "SA11",
+      "task": 35,
+      "trial": 1,
+      "type": "Missed Near-Miss (FN)",
+      "description": "SA11 Task 35 stumble",
+      "reason": "Grip reflex rise was below the 12.0 N threshold during the post-trip window"
+    },
+    {
+      "subject": "SA12",
+      "task": 35,
+      "trial": 1,
+      "type": "Missed Near-Miss (FN)",
+      "description": "SA12 Task 35 stumble",
+      "reason": "Grip reflex rise was below the 12.0 N threshold during the post-trip window"
+    },
+    {
+      "subject": "SA14",
+      "task": 35,
+      "trial": 1,
+      "type": "Missed Near-Miss (FN)",
+      "description": "SA14 Task 35 stumble",
+      "reason": "Grip reflex rise was below the 12.0 N threshold during the post-trip window"
+    },
+    {
+      "subject": "SA18",
+      "task": 35,
+      "trial": 1,
+      "type": "Missed Near-Miss (FN)",
+      "description": "SA18 Task 35 stumble",
+      "reason": "Grip reflex rise was below the 12.0 N threshold during the post-trip window"
+    },
+    {
+      "subject": "SA22",
+      "task": 35,
+      "trial": 1,
+      "type": "Missed Near-Miss (FN)",
+      "description": "SA22 Task 35 stumble",
+      "reason": "Grip reflex rise was below the 12.0 N threshold during the post-trip window"
+    },
+    {
+      "subject": "SA26",
+      "task": 35,
+      "trial": 1,
+      "type": "Missed Near-Miss (FN)",
+      "description": "SA26 Task 35 stumble",
+      "reason": "Grip reflex rise was below the 12.0 N threshold during the post-trip window"
+    },
+    {
+      "subject": "SA31",
+      "task": 30,
+      "trial": 1,
+      "type": "Missed Near-Miss (FN)",
+      "description": "SA31 Task 30 stumble",
+      "reason": "Grip reflex rise was below the 12.0 N threshold during the post-trip window"
+    },
+    {
+      "subject": "SA31",
+      "task": 35,
+      "trial": 1,
+      "type": "Missed Near-Miss (FN)",
+      "description": "SA31 Task 35 stumble",
+      "reason": "Grip reflex rise was below the 12.0 N threshold during the post-trip window"
+    },
+    {
+      "subject": "SA32",
+      "task": 35,
+      "trial": 1,
+      "type": "Missed Near-Miss (FN)",
+      "description": "SA32 Task 35 stumble",
+      "reason": "Grip reflex rise was below the 12.0 N threshold during the post-trip window"
+    },
+    {
+      "subject": "SA35",
+      "task": 35,
+      "trial": 1,
+      "type": "Missed Near-Miss (FN)",
+      "description": "SA35 Task 35 stumble",
+      "reason": "Grip reflex rise was below the 12.0 N threshold during the post-trip window"
+    },
+    {
+      "subject": "SA36",
+      "task": 35,
+      "trial": 1,
+      "type": "Missed Near-Miss (FN)",
+      "description": "SA36 Task 35 stumble",
+      "reason": "Grip reflex rise was below the 12.0 N threshold during the post-trip window"
+    }
+  ]
+}
